@@ -1,5 +1,3 @@
-
-https://github.com/user-attachments/assets/a8880871-a30a-4513-9ea9-a9f83ff60b62
 <div align="center">
 
 # 🤟 SilentVoice AI
@@ -80,10 +78,7 @@ Privacy:     On-device AI, no cloud
 
 ### 📹 **Full Demo Video**
 
-
-
-
-
+https://github.com/user-attachments/assets/a8880871-a30a-4513-9ea9-a9f83ff60b62
 
 
 ---
