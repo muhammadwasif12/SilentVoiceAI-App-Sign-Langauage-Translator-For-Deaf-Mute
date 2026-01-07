@@ -514,10 +514,10 @@ assets/
 
 <div align="center">
 
-### 🏫 **Final Semester AI Project**
+### 🏫 **Semester AI Project**
 **COMSATS University Islamabad, Sahiwal Campus**  
 **BS Computer Science**  
-**Semester:** 8th (AI Semester)  
+**Semester:** 5th (AI Semester)  
 **Submission Date:** December 2025
 
 </div>
