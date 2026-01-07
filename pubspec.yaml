@@ -1,0 +1,57 @@
+name: mute
+description: "SilentVoice AI - Real-Time Sign Language Translator"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  flutter_riverpod: ^2.4.9
+  camera: ^0.11.0+2
+  tflite_flutter: ^0.11.0
+  image: ^4.5.4
+  flutter_tts: ^4.2.3
+  sqflite: ^2.4.2
+  path_provider: ^2.1.5
+  path: ^1.9.1
+  http: ^1.6.0
+  google_fonts: ^6.3.2
+  permission_handler: ^11.3.1
+  shared_preferences: ^2.5.3
+  intl: ^0.20.2
+  equatable: ^2.0.7
+  flutter_animate: ^4.5.2
+  go_router: ^14.6.2
+  audioplayers: ^6.1.0
+  vibration: ^2.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/models/
+    - assets/models/gesture_model.tflite
+    - assets/models/gesture_labels.json
+    - assets/gestures/
+    - assets/sounds/
+    - assets/sounds/detection.mp3
+    - assets/app_icon.png
+
+# Flutter Launcher Icons Configuration
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/app_icon.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#6366F1"
+  adaptive_icon_foreground: "assets/app_icon.png"

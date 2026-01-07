@@ -1,0 +1,101 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Python virtual environments (AI Model Training)
+.venv/
+venv/
+ENV/
+env/
+ai_model/venv*/
+ai_model/.venv/
+
+# AI Model Training artifacts (exclude training code, keep only final model)
+ai_model/
+*.h5
+*.pb
+*.ckpt
+*.pth
+*.weights
+training_data/
+datasets/
+
+# Logs
+*.log
+flutter_*.log
+
+# Sensitive Files (Signing Keys - if any)
+*.jks
+*.keystore
+key.properties
+google-services.json
+GoogleService-Info.plist
+
+# Database files (if any local testing DBs)
+*.db
+*.sqlite
+*.sqlite3
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Internal Development Documentation (Keep only essential public docs)
+CODE_CLEANUP_SUMMARY.md
+DOCUMENTATION_INDEX.md
+ERROR_FIXES_REPORT.md
+GESTURE_FIX_SUMMARY.md
+MAJOR_UPDATE_SUMMARY.md
+MODEL_INTEGRATION.md
+PRESENTATION_DOCUMENTATION.md
+QUICK_REFERENCE_CARD.md
+SilentVoiceAI_Presentation_Content.md
+VIVA_QA_GUIDE.md
+
+# Keep these essential documentation files:
+# README.md
+# PROJECT_STRUCTURE_GUIDE.md
+# TECHNICAL_WORKFLOW.md
+# SilentVoiceAI_Project_Report.md
