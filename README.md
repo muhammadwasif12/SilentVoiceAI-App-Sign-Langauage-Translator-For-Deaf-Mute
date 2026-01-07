@@ -50,7 +50,7 @@
 - ⌨️ Type any text
 - 🖼️ See corresponding ASL gestures
 - 📚 Interactive slideshow/grid view
-- 🎓 Learn 107 gestures (A-Z, 0-9, words)
+- 🎓 Learn 39 gestures (A-Z, 0-9)
 
 </td>
 <td width="50%">
@@ -107,7 +107,7 @@ https://github.com/user-attachments/assets/YOUR-VIDEO-LINK-HERE
 <br/>
 <b>📚 Interactive Learning</b>
 <br/>
-<sub>107 ASL gestures</sub>
+<sub>39 ASL gestures</sub>
 </td>
 </tr>
 <tr>
@@ -148,7 +148,7 @@ https://github.com/user-attachments/assets/YOUR-VIDEO-LINK-HERE
 | 🎥 **Detection** | 🔄 **Translation** | 🎓 **Learning** | 🔒 **Privacy** |
 |:---:|:---:|:---:|:---:|
 | Real-time gesture recognition | Two-way translation | Interactive learning module | 100% offline AI |
-| 87% accuracy | Text ↔ Sign conversion | 107 ASL gestures | Zero data collection |
+| 87% accuracy | Text ↔ Sign conversion | 39 ASL gestures | Zero data collection |
 | <100ms latency | Text-to-Speech output | Progress tracking | On-device processing |
 | Confidence thresholding | Multi-language support | Practice quiz mode | Secure local storage |
 
@@ -160,7 +160,7 @@ https://github.com/user-attachments/assets/YOUR-VIDEO-LINK-HERE
 <summary><b>📸 Core Detection Features (Click to expand)</b></summary>
 
 - ✅ **Real-time Hand Gesture Recognition** — Live camera feed with <100ms latency
-- ✅ **107 Gesture Support** — A-Z, 0-9, common words & phrases
+- ✅ **39 Gesture Support** — A-Z (26 letters), 0-9 (10 numbers), 3 special gestures (Space, Delete, Nothing)
 - ✅ **Confidence Meter** — Visual indicator (70%+ = green, <70% = red)
 - ✅ **Text Accumulation** — Builds complete sentences letter-by-letter
 - ✅ **Smart Controls** — Space, Delete, Clear All, Save, Speak
@@ -184,23 +184,11 @@ https://github.com/user-attachments/assets/YOUR-VIDEO-LINK-HERE
 <details>
 <summary><b>📚 Learning System</b></summary>
 
-- ✅ **107 Gesture Library** — Complete ASL alphabet, numbers, words
-- ✅ **Categorized Display** — Alphabet, Numbers, Words, Phrases
+- ✅ **39 Gesture Library** — Complete ASL alphabet (A-Z) + numbers (0-9) + special gestures
+- ✅ **Categorized Display** — Alphabet, Numbers, Special Commands
 - ✅ **Progress Tracking** — Mark gestures as "learned" (saved to database)
 - ✅ **Visual Grid Layout** — 2-column responsive design
 - ✅ **High-Quality Images** — Hand-curated ASL sign images
-
-</details>
-
-<details>
-<summary><b>💪 Practice Mode (Quiz)</b></summary>
-
-- ✅ **Interactive Quiz** — Test your ASL skills
-- ✅ **10 Random Questions** — From your learned gestures
-- ✅ **Real-time Validation** — Instant ✅/❌ feedback
-- ✅ **Score Tracking** — XX/10 with percentage
-- ✅ **Time Tracking** — Session duration timer
-- ✅ **Review Wrong Answers** — See correct gesture images
 
 </details>
 
@@ -267,11 +255,11 @@ graph LR
 
 | Step | Phase | Details |
 |:---:|-------|---------|
-| 1️⃣ | **Dataset Collection** | Collected 21,000+ ASL images (200 per gesture × 107 gestures) |
+| 1️⃣ | **Dataset Collection** | Used ASL Alphabet Dataset from Kaggle (26 letters + 10 numbers + 3 special) |
 | 2️⃣ | **Data Augmentation** | Applied rotation, flip, brightness, contrast variations (3× dataset size) |
 | 3️⃣ | **Model Architecture** | Transfer learning with **MobileNetV2** (pre-trained on ImageNet) |
 | 4️⃣ | **Training** | 50 epochs, Adam optimizer, categorical cross-entropy loss |
-| 5️⃣ | **Achieved Accuracy** | **96% training accuracy**, **87% real-world accuracy** |
+| 5️⃣ | **Achieved Accuracy** | **89% training accuracy**, **87% real-world accuracy** |
 | 6️⃣ | **Model Compression** | TensorFlow Lite **quantization** (float16 → 3.3 MB model) |
 | 7️⃣ | **Flutter Integration** | `tflite_flutter` plugin, camera streaming, SQLite persistence |
 | 8️⃣ | **Optimization** | Reduced inference time to <100ms, 60 FPS UI |
@@ -452,7 +440,7 @@ assets/
 ├── models/
 │   ├── gesture_model.tflite       # AI model (3.3 MB)
 │   └── gesture_labels.json        # Label mappings
-├── gestures/                      # 107 hand sign images
+├── gestures/                      # 39 hand sign images
 ├── sounds/                        # Sound effects
 └── screenshots/                   # App screenshots (for README)
 ```
@@ -483,11 +471,11 @@ assets/
 3️⃣ TFLite Model Inference (~50-100ms)
    - Input: [1, 224, 224, 3] float32
    - CNN (MobileNetV2 backbone)
-   - Output: [1, 107] probabilities
+   - Output: [1, 39] probabilities
    ↓
 4️⃣ Post-processing
    - Find max probability index
-   - Map to gesture label (0→"A", 25→"Z")
+   - Map to gesture label (0→"A", 25→"Z", 26→"0", etc.)
    - Check confidence threshold
    ↓
 5️⃣ UI Update
@@ -509,12 +497,12 @@ assets/
 
 | Metric | Value | Details |
 |:------:|:-----:|:--------|
-| **Model Accuracy** | 96% | Training dataset performance |
+| **Model Accuracy** | 89% | Training dataset performance |
 | **Real-World Accuracy** | 87% | Live camera testing |
 | **Inference Time** | <100ms | Per frame on mid-range device |
 | **Model Size** | 3.3 MB | After TFLite quantization |
 | **App Size** | ~28 MB | APK (arm64-v8a) |
-| **Supported Gestures** | 107 | A-Z, 0-9, words, phrases |
+| **Supported Gestures** | 39 | A-Z (26), 0-9 (10), Special (3) |
 | **Frame Rate** | 60 FPS | UI animations |
 | **Camera FPS** | ~10 FPS | Optimal for real-time detection |
 
@@ -574,7 +562,7 @@ git push origin feature/AmazingFeature
 
 </details>
 
-### **Contribution Ideas**
+###**Contribution Ideas**
 
 - 🌍 Add more sign languages (BSL, ISL, etc.)
 - 🎨 Improve UI/UX
@@ -633,7 +621,7 @@ See [LICENSE](LICENSE) file for details.
 | Category | Thanks To |
 |:--------:|-----------|
 | 🎓 **Mentor** | Prof. **[Name]** — AI model optimization guidance |
-| 📊 **Dataset** | ASL hand signs dataset contributors |
+| 📊 **Dataset** | Kaggle ASL Alphabet Dataset contributors |
 | 💻 **Flutter Community** | Amazing packages & support |
 | 🤖 **TensorFlow Team** | TFLite framework |
 | 🎨 **UI Inspiration** | Dribbble & Behance designers |
@@ -651,7 +639,7 @@ timeline
     title Development Roadmap
     section Phase 1 (Completed)
       Core Detection : Real-time gesture recognition
-      Learning Module : 107 ASL gestures
+      Learning Module : 39 ASL gestures
       Database : SQLite persistence
     section Phase 2 (In Progress)
       iOS Support : App Store deployment
