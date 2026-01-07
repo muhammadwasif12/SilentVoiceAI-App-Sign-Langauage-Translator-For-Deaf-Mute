@@ -50,7 +50,7 @@
 - ⌨️ Type any text
 - 🖼️ See corresponding ASL gestures
 - 📚 Interactive slideshow/grid view
-- 🎓 Learn 107 gestures (A-Z, 0-9, words)
+- 🎓 Learn 39 gestures (A-Z, 0-9)
 
 </td>
 <td width="50%">
@@ -184,23 +184,11 @@ https://github.com/user-attachments/assets/YOUR-VIDEO-LINK-HERE
 <details>
 <summary><b>📚 Learning System</b></summary>
 
-- ✅ **107 Gesture Library** — Complete ASL alphabet, numbers, words
+- ✅ **39 Gesture Library** — Complete ASL alphabet, numbers, words
 - ✅ **Categorized Display** — Alphabet, Numbers, Words, Phrases
 - ✅ **Progress Tracking** — Mark gestures as "learned" (saved to database)
 - ✅ **Visual Grid Layout** — 2-column responsive design
 - ✅ **High-Quality Images** — Hand-curated ASL sign images
-
-</details>
-
-<details>
-<summary><b>💪 Practice Mode (Quiz)</b></summary>
-
-- ✅ **Interactive Quiz** — Test your ASL skills
-- ✅ **10 Random Questions** — From your learned gestures
-- ✅ **Real-time Validation** — Instant ✅/❌ feedback
-- ✅ **Score Tracking** — XX/10 with percentage
-- ✅ **Time Tracking** — Session duration timer
-- ✅ **Review Wrong Answers** — See correct gesture images
 
 </details>
 
@@ -267,11 +255,11 @@ graph LR
 
 | Step | Phase | Details |
 |:---:|-------|---------|
-| 1️⃣ | **Dataset Collection** | Collected 21,000+ ASL images (200 per gesture × 107 gestures) |
+| 1️⃣ | **Dataset Collection** | Used ASL Alphabet DataSet From Kaggle |
 | 2️⃣ | **Data Augmentation** | Applied rotation, flip, brightness, contrast variations (3× dataset size) |
 | 3️⃣ | **Model Architecture** | Transfer learning with **MobileNetV2** (pre-trained on ImageNet) |
 | 4️⃣ | **Training** | 50 epochs, Adam optimizer, categorical cross-entropy loss |
-| 5️⃣ | **Achieved Accuracy** | **96% training accuracy**, **87% real-world accuracy** |
+| 5️⃣ | **Achieved Accuracy** | **89% training accuracy**, **87% real-world accuracy** |
 | 6️⃣ | **Model Compression** | TensorFlow Lite **quantization** (float16 → 3.3 MB model) |
 | 7️⃣ | **Flutter Integration** | `tflite_flutter` plugin, camera streaming, SQLite persistence |
 | 8️⃣ | **Optimization** | Reduced inference time to <100ms, 60 FPS UI |
@@ -377,18 +365,6 @@ flutter run
 # 4️⃣ Build APK (Android)
 flutter build apk --split-per-abi
 ```
-
-### **APK Outputs**
-
-After building, APKs will be in:
-```
-build/app/outputs/flutter-apk/
-├── app-armeabi-v7a-release.apk   (32-bit devices)
-├── app-arm64-v8a-release.apk     (64-bit devices) ⭐ Recommended
-└── app-x86_64-release.apk        (Emulators)
-```
-
----
 
 ## 📁 **Project Architecture**
 
